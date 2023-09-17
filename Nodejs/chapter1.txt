@@ -1,0 +1,34 @@
+// const https = require('http');
+import  https from 'http';
+
+// const Feature  =require("./Feature");
+// import Feature  from "./Feature.js";
+// import {Feature2,Feature3} from "./Feature.js"
+import fs from "fs";
+import path from "path";
+
+// fs.readFile("./index.html",(err, data)=>{
+//    console.log(data) 
+// })
+console.log(path.extname("./feature/feature.html"));
+
+
+// console.log(Feature);
+const server = https.createServer((req,res)=>{
+    if(req.url ==="/"){
+        res.end("<h1>Home</h1> ")
+    }
+    else if(req.url ==="/about"){
+        res.end("<h1>about</h1> ")
+    }
+    else if(req.url ==="/contact"){
+        res.end("<h1>contact</h1> ")
+    }
+    else{
+        res.end("<h1>Page not Found</h1>")
+    }
+});
+
+server.listen(5000, ()=>{
+    console.log("server is Listening ");
+})

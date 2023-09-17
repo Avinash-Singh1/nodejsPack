@@ -1,0 +1,25 @@
+
+main{
+    display: block;
+    margin: auto;
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4px;
+    padding: 20px;
+
+}
+input{
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+button{
+    width: 20%;
+    display: block;
+    margin: auto;
+}

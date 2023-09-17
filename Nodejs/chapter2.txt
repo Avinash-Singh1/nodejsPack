@@ -1,0 +1,19 @@
+import express from "express";
+import path from "path";
+const app= express();
+
+app.get("/",(req,res)=>{
+    // res.json({
+    //     name:"avinash",
+    //     email:"avinash@gmail.com"
+    // })
+
+    // res.status(400).send("Meri merzee");
+    const pathlocation= path.resolve();
+    res.sendFile(path.join(pathlocation,"./index.html"));
+    console.log(pathlocation);
+    // res.sendFile()
+}) 
+app.listen(5000,()=>{
+    console.log("Server is working");
+})
